@@ -1556,6 +1556,11 @@ char *undname(char *buffer, char *mangled, int buflen, unsigned short int flags)
     return __unDName(buffer, mangled, buflen, malloc, free, flags);
 }
 
+char *init_undname(char *buffer, char *mangled, int buflen, unsigned short int flags)
+{
+    return undname(buffer, mangled, buflen, flags);
+}
+
 int main(int argc, char **argv) {
     char buf[2048];
     char *out;
